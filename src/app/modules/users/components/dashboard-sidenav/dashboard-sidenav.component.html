@@ -1,0 +1,94 @@
+<mat-nav-list class="paddingless">
+  <div>
+    <mat-list-item *ngFor="let menuItem of menu" (click)="toggle()" routerLink="/solicitud-de-credito/informacion-personal" class="responsive" routerLinkActive="active">
+      <div class="done"></div>
+      <div fxFlex="10"></div>
+      <div class="sidenav-item">
+        <h6>{{menuItem.name}}</h6>
+      </div>
+    </mat-list-item>
+
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let menuE of menu" style="margin-top: 0 !important; margin-bottom: 0 !important; box-shadow: none !important;">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{menuE.name}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Submenus</p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel style="margin-top: 0 !important; margin-bottom: 0 !important; box-shadow: none !important;">
+        <mat-expansion-panel-header style="padding: 0 1rem !important;" class="active">
+          <mat-panel-title style="display: flex; align-items: center;">
+            <mat-icon style="font-size: 1.1rem;height: 1.1rem; width: 1.1rem; margin-right: 0.5rem; color: #214b64; font-weight: 500;">monetization_on</mat-icon>
+            <span style="font-size: 0.8rem; color: #214b64; font-weight: 500;">Ventas</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+
+        <mat-list-item (click)="toggle()" routerLink="/users/dashboard" class="responsive">
+          <div class="sidenav-item">
+            <mat-icon style="font-size: 1.1rem;height: 1.1rem; width: 1.1rem; margin-right: 0.5rem; color: #214b64; font-weight: 500;">arrow_right</mat-icon>
+            <span style="font-size: 0.8rem; color: #214b64; font-weight: 500;">Ventas</span>
+          </div>
+        </mat-list-item>
+        <mat-list-item (click)="toggle()" routerLink="/users/dashboard" class="responsive">
+          <div class="sidenav-item">
+            <mat-icon style="font-size: 1.1rem;height: 1.1rem; width: 1.1rem; margin-right: 0.5rem; color: #214b64; font-weight: 500;">arrow_right</mat-icon>
+            <span style="font-size: 0.8rem; color: #214b64; font-weight: 500;">Devolución</span>
+          </div>
+        </mat-list-item>
+        <mat-list-item (click)="toggle()" routerLink="/users/dashboard" class="responsive">
+          <div class="sidenav-item">
+            <mat-icon style="font-size: 1.1rem;height: 1.1rem; width: 1.1rem; margin-right: 0.5rem; color: #214b64; font-weight: 500;">arrow_right</mat-icon>
+            <span style="font-size: 0.8rem; color: #214b64; font-weight: 500;">Clientes</span>
+          </div>
+        </mat-list-item>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel style="margin-top: 0 !important; margin-bottom: 0 !important; box-shadow: none !important;">
+        <mat-expansion-panel-header style="padding: 0 1rem !important;">
+          <mat-panel-title style="display: flex; align-items: center;">
+            <mat-icon style="font-size: 1.1rem;height: 1.1rem; width: 1.1rem; margin-right: 0.5rem; color: #214b64; font-weight: 500;">supervisor_account</mat-icon>
+            <span style="font-size: 0.8rem; color: #214b64; font-weight: 500;">Usuarios</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+
+        <mat-list-item (click)="toggle()" routerLink="/users/dashboard" class="responsive">
+          <div class="sidenav-item">
+            <mat-icon style="font-size: 1.1rem;height: 1.1rem; width: 1.1rem; margin-right: 0.5rem; color: #214b64; font-weight: 500;">arrow_right</mat-icon>
+            <span style="font-size: 0.8rem; color: #214b64; font-weight: 500;">Usuarios</span>
+          </div>
+        </mat-list-item>
+        <mat-list-item (click)="toggle()" routerLink="/users/dashboard" class="responsive">
+          <div class="sidenav-item">
+            <mat-icon style="font-size: 1.1rem;height: 1.1rem; width: 1.1rem; margin-right: 0.5rem; color: #214b64; font-weight: 500;">arrow_right</mat-icon>
+            <span style="font-size: 0.8rem; color: #214b64; font-weight: 500;">Roles</span>
+          </div>
+        </mat-list-item>
+        <mat-list-item (click)="toggle()" routerLink="/users/dashboard" class="responsive">
+          <div class="sidenav-item">
+            <mat-icon style="font-size: 1.1rem;height: 1.1rem; width: 1.1rem; margin-right: 0.5rem; color: #214b64; font-weight: 500;">arrow_right</mat-icon>
+            <span style="font-size: 0.8rem; color: #214b64; font-weight: 500;">Permisos de roles</span>
+          </div>
+        </mat-list-item>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <mat-list-item (click)="toggle()" routerLink="/users/dashboard" class="responsive">
+      <div class="sidenav-item">
+        <mat-icon style="font-size: 1.1rem;height: 1.1rem; width: 1.1rem; margin-right: 0.5rem; color: #214b64; font-weight: 500;">supervisor_account</mat-icon>
+        <span style="font-size: 0.8rem; color: #214b64; font-weight: 500;">Ventas</span>
+      </div>
+    </mat-list-item>
+
+    <mat-list-item routerLink="/users/dashboard" class="responsive hide-for-medium">
+      <div class="sidenav-item">
+        <mat-icon style="font-size: 1.1rem;height: 1.1rem; width: 1.1rem; margin-right: 0.5rem; color: #214b64; font-weight: 500;">supervisor_account</mat-icon>
+        <span style="font-size: 0.8rem; color: #214b64; font-weight: 500;">Cerrar sesión</span>
+      </div>
+    </mat-list-item>
+  </div>
+</mat-nav-list>
