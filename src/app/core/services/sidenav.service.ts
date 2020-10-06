@@ -8,7 +8,7 @@ export class SidenavService {
   public position = 'start';
   public mode = 'side';
   public sidenavMd = 13;
-  public sidenavSm = 14;
+  public sidenavSm = 19;
   public sidenavXl = 16;
   public disableClose = true;
   public width = this.sidenavMd;

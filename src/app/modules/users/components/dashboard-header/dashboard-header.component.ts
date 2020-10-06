@@ -12,6 +12,7 @@ export class DashboardHeaderComponent implements OnInit {
   @Input() isMenuOpen;
   public isDropdownOpen = true;
   public userImage = '/assets/images/dashboard/default-user.png';
+  public logoImage = '/assets/images/public/branding/logo-blue.png';
 
 
   constructor(public router: Router) { }
