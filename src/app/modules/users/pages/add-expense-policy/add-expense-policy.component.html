@@ -3,62 +3,31 @@
   <p>Creación de una política de viaje</p>
 </div>
 
-<mat-horizontal-stepper [linear]="false" #stepper style="border-radius: 1rem;">
+<mat-horizontal-stepper [linear]="false" #stepper style="border-radius: 1rem;" (selectionChange)="stepperChange($event)">
   <mat-step>
     <ng-template matStepLabel>
-      <div class="active-stepper">
+      <div class="" [ngClass]="{'active-stepper': selectedStepper === 0, 'inactive-stepper': selectedStepper !== 0}">
         Configuración
       </div>
     </ng-template>
-    <form #form="ngForm" class="mb-0 mt-4">
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Nombre de la política</label>
-            <input type="email" placeholder="Nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Importar configuración de otra política</label>
-            <select class="custom-select" id="inputGroupSelect01">
-              <option selected>Ninguna</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <div class="form-group mb-0">
-            <label for="exampleInputEmail1">Descripción</label>
-            <textarea placeholder="Descripción" class="custom-textarea"></textarea>
-          </div>
-        </div>
-      </div>
-    </form>
-
-
-
+    <app-policy-configuration></app-policy-configuration>
   </mat-step>
+
   <mat-step>
     <ng-template matStepLabel>
-      <div class="inactive-stepper">
+      <div class="" [ngClass]="{'active-stepper': selectedStepper === 1, 'inactive-stepper': selectedStepper !== 1}">
         Categorías
       </div>
     </ng-template>
-    <p>a</p>
+    <app-categories-table></app-categories-table>
   </mat-step>
+
   <mat-step>
     <ng-template matStepLabel>
-      <div class="inactive-stepper">
+      <div class="" [ngClass]="{'active-stepper': selectedStepper === 2, 'inactive-stepper': selectedStepper !== 2}">
         Asignación
       </div>
     </ng-template>
-    <p>c</p>
+    <app-users-assignment></app-users-assignment>
   </mat-step>
 </mat-horizontal-stepper>

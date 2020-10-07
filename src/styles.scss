@@ -1076,6 +1076,42 @@ mat-step-header {
   }
 }
 
+.mat-checkbox-layout {
+  margin: 0 !important;
+}
+
+.categories-table {
+  .mat-header-row {
+    background-color: #03a582;
+    border-radius: 50px !important;
+
+    .mat-header-cell {
+      color: white !important;
+    }
+
+    .mat-checkbox .mat-checkbox-frame {
+      border-color: white;
+    }
+
+    .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+      background-color: white !important;
+    }
+
+    .mat-checkbox-checkmark-path {
+      stroke: #03a582 !important;
+    }
+
+    .mat-checkbox-mixedmark {
+      background-color: #03a582 !important;
+    }
+  }
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: #03a582 !important;
+}
+
+
 .custom-textarea {
   display: block;
   width: 100%;
@@ -1108,3 +1144,32 @@ mat-step-header {
     font-weight: 500;
   }
 }
+
+
+.pd-l-r-15 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.simple-label {
+  font-weight: 500;
+}
+
+input, select {
+  font-size: 14px !important;
+}
+
+.button-container {
+  padding: 15px;
+}
+
+.primary-button {
+  background-color: #06a682;
+  color: white;
+
+  &:hover {
+    color: white;
+  }
+}
+
+
