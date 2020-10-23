@@ -1,0 +1,13 @@
+<mat-tab-group mat-align-tabs="center" (selectedTabChange)="setSelectedTab($event)">
+  <mat-tab label="Detalles gastos">
+    <app-expense-detail-table></app-expense-detail-table>
+  </mat-tab>
+  <mat-tab label="Alertas">
+    <app-expense-notification-table></app-expense-notification-table>
+
+    <app-expense-efos-table></app-expense-efos-table>
+  </mat-tab>
+  <mat-tab label="Gastos por categoría">
+    <app-expense-by-category-table></app-expense-by-category-table>
+  </mat-tab>
+</mat-tab-group>

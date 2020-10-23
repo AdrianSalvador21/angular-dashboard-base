@@ -1,0 +1,34 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 categories-table mt-3">
+  <!-- Position Column -->
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef> Categoría </th>
+    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef> Total </th>
+    <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="billable">
+    <th mat-header-cell *matHeaderCellDef> Facturable </th>
+    <td mat-cell *matCellDef="let element"> {{element.billable}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="excess">
+    <th mat-header-cell *matHeaderCellDef> Excede política </th>
+    <td mat-cell *matCellDef="let element"> {{element.excess}} </td>
+  </ng-container>
+
+  <!-- Actions Column -->
+  <ng-container matColumnDef="notBillable">
+    <th mat-header-cell *matHeaderCellDef> No facturable </th>
+    <td mat-cell *matCellDef="let element"> {{element.notBillable}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

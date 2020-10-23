@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {MatTableDataSource} from '@angular/material/table';
-
 import {SelectionModel} from '@angular/cdk/collections';
 
 @Component({
-  selector: 'app-categories-table',
-  templateUrl: './categories-table.component.html',
-  styleUrls: ['./categories-table.component.scss'],
+  selector: 'app-subcategories-table',
+  templateUrl: './subcategories-table.component.html',
+  styleUrls: ['./subcategories-table.component.scss'],
   animations: [
     trigger('detailExpand', [
       state('collapsed', style({height: '0px', minHeight: '0'})),
@@ -16,7 +15,11 @@ import {SelectionModel} from '@angular/cdk/collections';
     ]),
   ]
 })
-export class CategoriesTableComponent implements OnInit {
+export class SubcategoriesTableComponent implements OnInit {
+  @Input() set elements(elements: any) {
+    ELEMENT_DATA = elements;
+    this.dataSource = new MatTableDataSource<any>(ELEMENT_DATA);
+  }
   columnsToDisplay = ['select', 'limit', 'client_percentage'];
   expandedElement: any | null;
   dataSource = new MatTableDataSource<any>(ELEMENT_DATA);
@@ -66,7 +69,7 @@ export class CategoriesTableComponent implements OnInit {
   }
 }
 
-const ELEMENT_DATA: any[] = [
+let ELEMENT_DATA: any[] = [
   {
     position: 1,
     limit: 'Hydrogen',
@@ -79,20 +82,6 @@ const ELEMENT_DATA: any[] = [
     client_percentage: '40%',
     subCategories: [],
     name: 'Hospedaje'
-  }, {
-    position: 3,
-    limit: 'Lithium',
-    client_percentage: '35%',
-    subCategories: [
-      {
-        position: 1,
-        limit: 'Hydrogen',
-        client_percentage: '25%',
-        subCategories: [],
-        name: 'Alimentos'
-      }
-    ],
-    name: 'Gasolina'
   }
 ];
 

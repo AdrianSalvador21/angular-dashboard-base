@@ -1,0 +1,90 @@
+.policy-description {
+  h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  .amount {
+    font-size: 1.2rem;
+    color: #06a682;
+    font-weight: 400;
+  }
+
+  .description {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+
+.policy-users {
+  h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+}
+
+.policy-title-container {
+  display: flex;
+  align-items: center;
+
+  .policy-title {
+    margin: 0 !important;
+  }
+}
+
+.policy-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.user-assg-img-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1.2rem;
+
+  p, span {
+    margin-left: 10px !important;
+    font-weight: 500;
+    font-size: 15px;
+  }
+}
+
+.user-assg-img {
+  border: solid transparent 1px;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.report-status {
+  margin-top: 1.3rem;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 1rem;
+
+  .warning {
+    color: #f28503;
+  }
+}
+
+.report-detail {
+  font-size: 1rem;
+  font-weight: 400;
+
+  span {
+    font-weight: 500;
+  }
+
+  .danger {
+    color: #ab0800;
+  }
+}
+
+.report-send-date {
+  font-weight: 600;
+  margin-left: 0px;
+}

@@ -1,0 +1,46 @@
+<div class="dashboard-section-header">
+  <div class="report-detail-title">
+    <h2>Viaje a Aguascalientes</h2>
+    <div class="user-assg-img-container">
+      <div>
+        <p class="m-0">Chuck Morales</p>
+        <span class="text-muted">RFC: CH2124MEN</span>
+      </div>
+      <div [ngStyle]="{'background': 'url(' + userImage + ') no-repeat center center', 'background-size': 'cover'}" class="user-assg-img"></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="dashboard-section-container mt-2">
+  <div class="row report-detail-table">
+    <div class="col-12 col-sm-6 col-md-3">
+      <h4>Anticipo dado</h4>
+      <p>$15,000 MXN</p>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-3">
+      <h4>Monto gastado</h4>
+      <p>$13,000 MXN</p>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-3">
+      <h4>Facturable</h4>
+      <p>$11,000 MXN</p>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-3">
+      <h4>No facturable</h4>
+      <p class="danger">$2,000 MXN</p>
+    </div>
+  </div>
+
+  <div class="mt-4">
+    <app-report-table></app-report-table>
+  </div>
+
+  <div class="button-container mt-4">
+    <button class="btn primary-button mr-2 ft-14">Aprobar reporte</button>
+    <button class="btn btn-danger pd-l-r-15 ft-14">Devolver reporte</button>
+  </div>
+</div>

@@ -19,13 +19,19 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 0.8rem;
 
   p {
     margin-left: 10px !important;
     font-weight: 500;
     font-size: 15px;
   }
+}
+
+.user-assg-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.8rem;
 }
 
 .user-assg-img {

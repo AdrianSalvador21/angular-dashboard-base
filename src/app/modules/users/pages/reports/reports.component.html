@@ -1,0 +1,53 @@
+<div class="dashboard-section-header">
+  <h2>Reportes</h2>
+</div>
+
+
+<div *ngFor="let item of [1,1,1]; let i = index">
+  <span class="text-muted report-send-date">Enviado el 18 ago 2020</span>
+  <div class="dashboard-section-container mt-1">
+    <div class="row">
+      <div class="col-12 col-md-6 pd-0">
+        <div class="policy-description">
+          <div>
+            <div class="policy-title-container">
+              <h3 class="policy-title">Viaje a Aguascalientes</h3>
+              <div class="display-center">
+                <mat-icon style="font-size: 1.2rem;height: 1.2rem; width: 1.2rem; margin-right: 0.5rem; font-weight: 500; margin-left: 0.5rem;">message</mat-icon>
+                <div class="notification-value">{{i + 1}}</div>
+              </div>
+            </div>
+            <span class="text-muted">Del 01 ago 2020 al 15 ago 2020</span>
+          </div>
+
+          <div class="user-assg-img-container">
+            <div [ngStyle]="{'background': 'url(' + userImage + ') no-repeat center center', 'background-size': 'cover'}" class="user-assg-img"></div>
+            <div>
+              <p class="m-0">Chuck Morales</p>
+              <span class="text-muted">RFC: CH2124MEN</span>
+            </div>
+          </div>
+
+
+          <p class="report-status">Status: <span class="warning">Por aprobar (5 días)</span></p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 pd-0">
+        <div class="policy-users">
+          <div class="policy-title-container mb-3">
+            <h3 class="policy-title">Resumen de gastos</h3>
+            <div class="display-center">
+              <mat-icon style="font-size: 1.3rem;height: 1.3rem; width: 1.3rem; margin-right: 0.5rem; font-weight: 500; margin-left: 0.5rem;">more_vert</mat-icon>
+            </div>
+          </div>
+
+          <p class="report-detail">Anticipo dado: <span>$15,000 MXN</span></p>
+          <p class="report-detail">Monto gastado: <span>$13,000 MXN</span></p>
+          <p class="report-detail">Fuera de política: <span class="danger">$1,000 MXN</span></p>
+          <p class="report-detail">No facturable: <span class="danger">$4,000 MXN</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

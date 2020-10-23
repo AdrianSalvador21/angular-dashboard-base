@@ -1,0 +1,44 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 categories-table mt-3">
+  <!-- Position Column -->
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef> Fecha </th>
+    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef> Categoría </th>
+    <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef> Descripción </th>
+    <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="amount">
+    <th mat-header-cell *matHeaderCellDef> Monto </th>
+    <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+  </ng-container>
+
+  <!-- Actions Column -->
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <!-- <td mat-cell *matCellDef="let element">{{element.category}}</td> -->
+    <td mat-cell *matCellDef="let element">
+      <div class="actions-container display-center">
+        <mat-icon style="font-size: 1.2rem;height: 1.2rem; width: 1.2rem; margin-right: 0.5rem; font-weight: 500; margin-left: 0.5rem; color: #f28400">error</mat-icon>
+        <div class="display-center" style="position: relative;">
+          <mat-icon style="font-size: 1.2rem;height: 1.2rem; width: 1.2rem; margin-right: 0.5rem; font-weight: 500; margin-left: 0.5rem;">message</mat-icon>
+          <div class="notification-position">{{5}}</div>
+        </div>
+        <mat-icon style="font-size: 1.2rem;height: 1.2rem; width: 1.2rem; margin-right: 0.5rem; font-weight: 500; margin-left: 0.5rem;">more_vert</mat-icon>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

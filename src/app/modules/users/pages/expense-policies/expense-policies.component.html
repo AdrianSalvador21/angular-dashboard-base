@@ -1,0 +1,44 @@
+<div class="dashboard-section-header">
+  <h2>Políticas de viaje</h2>
+</div>
+
+<div class="dashboard-section-container" *ngFor="let item of [1,1,1]">
+  <div class="policy-title-container">
+    <h3 class="policy-title">Política de Aguascalientes</h3>
+    <mat-icon style="font-size: 1.2rem;height: 1.2rem; width: 1.2rem; margin-right: 0.5rem; font-weight: 500; margin-left: 0.5rem; color: #019473;">create</mat-icon>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-6 pd-0">
+      <div class="policy-description">
+        <div>
+          <h4>Presupuesto asignado</h4>
+          <p class="amount">$15,000 MXN</p>
+        </div>
+
+        <div>
+          <h4>Descripción</h4>
+          <p class="description">Política para vendedores de Aguascalientes</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 pd-0">
+      <div class="policy-users">
+        <h4>Empleados asignados</h4>
+
+        <div>
+          <div class="user-assg-img-container">
+            <div [ngStyle]="{'background': 'url(' + userImage + ') no-repeat center center', 'background-size': 'cover'}" class="user-assg-img"></div>
+            <p class="m-0">Chuck Morales</p>
+          </div>
+
+          <div class="user-assg-img-container">
+            <div [ngStyle]="{'background': 'url(' + userImage + ') no-repeat center center', 'background-size': 'cover'}" class="user-assg-img"></div>
+            <p class="m-0">Contra Alvarado</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

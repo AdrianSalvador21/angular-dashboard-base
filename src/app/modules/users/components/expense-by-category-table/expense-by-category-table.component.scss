@@ -1,0 +1,18 @@
+table {
+  width: 100%;
+}
+
+.notification-position {
+  position: absolute;
+  left: 18px;
+  top: -10px;
+  color: white;
+  background-color: #06a682;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 11px;
+}
