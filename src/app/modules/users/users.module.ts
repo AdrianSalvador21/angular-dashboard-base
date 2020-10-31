@@ -25,6 +25,9 @@ import { ExpenseNotificationTableComponent } from './components/expense-notifica
 import { ExpenseByCategoryTableComponent } from './components/expense-by-category-table/expense-by-category-table.component';
 import { ExpenseEfosTableComponent } from './components/expense-efos-table/expense-efos-table.component';
 import { ExpenseNotificationDetailTableComponent } from './components/expense-notification-detail-table/expense-notification-detail-table.component';
+import {ReportDetailDialogComponent} from './dialogs/report-detail-dialog/report-detail-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   imports: [
@@ -35,7 +38,9 @@ import { ExpenseNotificationDetailTableComponent } from './components/expense-no
     MatTableModule,
     MaterialModule,
     CommonModule,
-    MatTabsModule
+    MatTabsModule,
+    MatDialogModule,
+    MatMenuModule
   ],
   declarations: [
     DashboardComponent,
@@ -55,7 +60,14 @@ import { ExpenseNotificationDetailTableComponent } from './components/expense-no
     ExpenseNotificationTableComponent,
     ExpenseByCategoryTableComponent,
     ExpenseEfosTableComponent,
-    ExpenseNotificationDetailTableComponent
+    ExpenseNotificationDetailTableComponent,
+    ReportDetailDialogComponent
+  ],
+  exports: [
+    ReportDetailDialogComponent
+  ],
+  entryComponents: [
+    ReportDetailDialogComponent
   ]
 })
 

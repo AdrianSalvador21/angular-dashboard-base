@@ -1,0 +1,89 @@
+
+
+<div class="w-100 close-dialog-container">
+  <button class="btn-close-dialog pd-0" mat-button [mat-dialog-close]="true"><i class="material-icons">close</i></button>
+</div>
+
+<div class="container dialog">
+  <div class="row">
+    <div class="col-12 report-dialog-title">
+      <h3>Hotel Camino Real</h3>
+      <p class="text-muted">15/08/20</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div>
+
+        <!-- Alerts -->
+        <div class="report-detail-header mt-3">
+          <p>Alertas</p>
+        </div>
+
+        <div class="report-detail-item">
+          No se ha incluido una factura
+        </div>
+        <div class="report-detail-item">
+          Parece ser un gasto duplicado
+        </div>
+      </div>
+
+
+      <!-- Fields -->
+      <div class="report-detail-header mt-3">
+        <p>Campos</p>
+      </div>
+
+      <div class="report-detail-item">
+        <span>Fecha</span>
+        <span>15/08/20</span>
+      </div>
+
+      <div class="report-detail-item">
+        <span>Categoría</span>
+        <span>Hospedaje</span>
+      </div>
+
+      <div class="report-detail-item">
+        <span>Monto</span>
+        <span>$120 MXN</span>
+      </div>
+
+      <div class="report-detail-item">
+        <span>Comercio</span>
+        <span>Hotel Camino Real</span>
+      </div>
+
+      <div class="report-detail-item">
+        <span>Método de pago</span>
+        <span>Terjeta corporativa</span>
+      </div>
+
+      <div class="report-detail-item">
+        <span>Cliente</span>
+        <span>Felipe Ángeles</span>
+      </div>
+
+      <div class="report-detail-item">
+        <span>Proyecto</span>
+        <span>Ventas en San Luis</span>
+      </div>
+
+    </div>
+
+    <div class="col-12 col-md-6">
+      <img class="report-image" [src]="reportImage">
+
+      <div class="report-image-detail">
+        <mat-icon style="font-size: 1.1rem;height: 1.1rem; width: 1.1rem; margin-right: 0.5rem; font-weight: 500; color: #ab0800;">description</mat-icon>
+        <p class="mb-0">Factura faltante</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-container mt-4">
+    <button class="btn primary-button mr-2 ft-14">Guardar cambios</button>
+    <button class="btn btn-danger pd-l-r-15 ft-14">Cancelar</button>
+  </div>
+</div>

@@ -1,6 +1,42 @@
 <div class="dashboard-section-header">
   <div class="report-detail-title">
-    <h2>Viaje a Aguascalientes</h2>
+    <div class="report-approver-title">
+      <h2>Viaje a Aguascalientes</h2>
+      <mat-icon [matMenuTriggerFor]="menu" class="ra-icon cursor-pointer">keyboard_arrow_down</mat-icon>
+    </div>
+    <mat-menu #menu="matMenu" class="report-approver-menu">
+      <button mat-menu-item style="display: flex; justify-content: space-between;">
+        <span>Aprobador del reporte</span>
+        <span style="color: #06a682;">Bob Hernández</span>
+      </button>
+
+      <button mat-menu-item style="display: flex; justify-content: space-between;">
+        <span>Política de viajes</span>
+        <span style="color: #06a682;">Política de Aguascalientes</span>
+      </button>
+
+      <button mat-menu-item style="display: flex; justify-content: space-between;">
+        <span>Duración del viaje</span>
+        <span style="color: #06a682;">10 días</span>
+      </button>
+
+      <button mat-menu-item style="display: flex; justify-content: space-between;">
+        <span>Nombre del proyecto</span>
+        <span style="color: #06a682;">Visita a clientes de Aguascalientes</span>
+      </button>
+
+      <button mat-menu-item style="display: flex; justify-content: space-between;">
+        <span>Cliente visitado</span>
+        <span style="color: #06a682;">Luis San Marcos</span>
+      </button>
+
+      <button mat-menu-item style="display: flex; justify-content: space-between;">
+        <span>Objetivo del viaje</span>
+        <span style="color: #06a682;">Vender nuevos productos</span>
+      </button>
+    </mat-menu>
+
+
     <div class="user-assg-img-container">
       <div>
         <p class="m-0">Chuck Morales</p>

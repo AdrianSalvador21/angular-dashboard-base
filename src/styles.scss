@@ -3,7 +3,11 @@
 @import 'stylesheets/abstracts/mixins';
 
 html, body { height: 100%;}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; }
+
+* {
+  font-family: 'Open Sans', sans-serif !important;
+}
 
 /* TEXTS ================================== */
 .black-text {
@@ -1220,3 +1224,25 @@ input, select, textarea {
   font-size: 11px;
 }
 
+.close-dialog-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.material-icons {
+  font-family: 'Material Icons' !important;
+}
+
+.mat-dialog-container {
+  margin-top: 2rem;
+}
+
+.cdk-focused, .cdk-mouse-focused {
+  outline: none !important;
+}
+
+
+.report-approver-menu.mat-menu-panel {
+  max-width: 900px !important;
+  width: 470px !important;
+}

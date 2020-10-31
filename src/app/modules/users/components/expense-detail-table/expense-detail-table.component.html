@@ -29,12 +29,12 @@
     <!-- <td mat-cell *matCellDef="let element">{{element.category}}</td> -->
     <td mat-cell *matCellDef="let element">
       <div class="actions-container display-center">
-        <mat-icon style="font-size: 1.2rem;height: 1.2rem; width: 1.2rem; margin-right: 0.5rem; font-weight: 500; margin-left: 0.5rem; color: #f28400">error</mat-icon>
+        <mat-icon class="cursor-pointer" style="font-size: 1.2rem;height: 1.2rem; width: 1.2rem; margin-right: 0.5rem; font-weight: 500; margin-left: 0.5rem; color: #f28400">error</mat-icon>
         <div class="display-center" style="position: relative;">
-          <mat-icon style="font-size: 1.2rem;height: 1.2rem; width: 1.2rem; margin-right: 0.5rem; font-weight: 500; margin-left: 0.5rem;">message</mat-icon>
+          <mat-icon class="cursor-pointer" style="font-size: 1.2rem;height: 1.2rem; width: 1.2rem; margin-right: 0.5rem; font-weight: 500; margin-left: 0.5rem;">message</mat-icon>
           <div class="notification-position">{{5}}</div>
         </div>
-        <mat-icon style="font-size: 1.2rem;height: 1.2rem; width: 1.2rem; margin-right: 0.5rem; font-weight: 500; margin-left: 0.5rem;">more_vert</mat-icon>
+        <mat-icon (click)="showDetail()" class="cursor-pointer" style="font-size: 1.2rem;height: 1.2rem; width: 1.2rem; margin-right: 0.5rem; font-weight: 500; margin-left: 0.5rem;">more_vert</mat-icon>
       </div>
     </td>
   </ng-container>

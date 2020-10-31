@@ -1,0 +1,46 @@
+
+.report-dialog-title {
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+.report-detail-header {
+  p {
+    background-color: #06a682;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+}
+
+.report-detail-item {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #c7c7c7;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.report-image {
+  width: 100% !important;
+  height: 95%;
+}
+
+.report-image-detail {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 7px;
+}

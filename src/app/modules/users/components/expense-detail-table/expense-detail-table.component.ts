@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import {ReportDetailDialogComponent} from '../../dialogs/report-detail-dialog/report-detail-dialog.component';
 
 export interface PeriodicElement {
   category: any;
@@ -23,9 +25,19 @@ export class ExpenseDetailTableComponent implements OnInit {
   displayedColumns: string[] = ['date', 'category', 'description', 'amount', 'actions'];
   dataSource = ELEMENT_DATA;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  showDetail(): void {
+    this.dialog.open(ReportDetailDialogComponent, {
+      width: '69vw',
+      minWidth: '400px',
+      maxWidth: '800px',
+      minHeight: '500px',
+      autoFocus: false,
+    });
   }
 
 }
